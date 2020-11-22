@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import PersonalData from "./profile/personalData"
+
+const handleName = (name) => {
+  alert(name);
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{margin:"30px auto",textAlign:"center"}}> 
+     
+     <PersonalData name="Hatem Hamrouni" 
+                   bio=" A simple human who looks for happiness "
+                   profession="Graphic Designer"
+                   handleName={handleName}>
+<img src="/pic.jpg" width="250px"alt="My pic"/>
+     </PersonalData>
+    
     </div>
   );
 }
